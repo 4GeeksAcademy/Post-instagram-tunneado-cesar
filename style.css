@@ -1,0 +1,51 @@
+
+    .view-toggle {
+        display: none;
+    }
+
+    .view-label {
+        cursor: pointer;
+        padding: 8px 16px;
+        border: 2px solid #007bff;
+        border-radius: 20px;
+        margin: 0 5px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    .view-toggle:checked + .view-label {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .view-label:hover {
+        background-color: #e9ecef;
+    }
+
+    .view-toggle:checked + .view-label:hover {
+        background-color: #0056b3;
+    }
+
+    /* Control de visibilidad de las vistas */
+    #verticalContent,
+    #gridContent {
+        display: none;
+    }
+
+    /* Mostrar vista vertical por defecto */
+    #verticalToggle:checked ~ .container #verticalContent {
+        display: block;
+    }
+
+    #verticalToggle:checked ~ .container #gridContent {
+        display: none;
+    }
+
+    /* Mostrar vista grilla cuando está seleccionada */
+    #gridToggle:checked ~ .container #gridContent {
+        display: block;
+    }
+
+    #gridToggle:checked ~ .container #verticalContent {
+        display: none;
+    }
